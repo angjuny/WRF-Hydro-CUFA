@@ -1,0 +1,93 @@
+[TITLE]
+;;Project Title/Notes
+Tybee Island
+
+[OPTIONS]
+;;Option             Value
+FLOW_UNITS           CMS
+INFILTRATION         HORTON
+FLOW_ROUTING         DYNWAVE
+LINK_OFFSETS         DEPTH
+MIN_SLOPE            0
+ALLOW_PONDING        YES
+SKIP_STEADY_STATE    NO
+
+START_DATE           07/16/2017
+START_TIME           00:00:00
+REPORT_START_DATE    07/16/2017
+REPORT_START_TIME    00:00:00
+END_DATE             10/01/2017
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:01:00
+WET_STEP             00:01:00
+DRY_STEP             01:00:00
+ROUTING_STEP         00:00:05
+RULE_STEP            00:00:00
+
+INERTIAL_DAMPING     NONE
+NORMAL_FLOW_LIMITED  BOTH
+FORCE_MAIN_EQUATION  H-W
+VARIABLE_STEP        0.75
+LENGTHENING_STEP     0
+MIN_SURFAREA         1.167
+MAX_TRIALS           8
+HEAD_TOLERANCE       0.0015
+SYS_FLOW_TOL         5
+LAT_FLOW_TOL         5
+MINIMUM_STEP         0.50000
+THREADS              1
+
+[FILES]
+;;Interfacing Files
+SAVE HOTSTART "CPL_SWMM5.HSFSAVE"
+
+[JUNCTIONS]
+;;Name           Elevation  MaxDepth   InitDepth  SurDepth   Aponded   
+;;-------------- ---------- ---------- ---------- ---------- ----------
+JB0280           0.95695    1.31064    0.00000    100.000    0.000     
+JB0279           0.77791    2.46888    0.00000    100.000    0.000     
+;;OF0028           -0.23521   0.00000    0.00000    0.000      100.000   
+;;OF0029           -0.29182   0.00000    0.00000    0.000      100.000   
+
+[OUTFALLS]
+;;Name           Elevation  Type       Stage Data       Gated    Route To        
+;;-------------- ---------- ---------- ---------------- -------- ----------------
+;;OF0031           -0.43629   TIMESERIES 0                NO                       
+OF0026           0.94488    TIMESERIES 0                NO                       
+;;OF0030           -0.44510   TIMESERIES 0                NO                       
+
+[CONDUITS]
+;;Name           From Node        To Node          Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow   
+;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
+;;SP0335           OF0029           OF0030           16.48994   0.015      0.00000    0.00000    0.00000    0.00000   
+SP0302           JB0280           JB0279           72.96097   0.015      0.03048    0.01524    0.00000    0.00000   
+;;SP0334           OF0028           OF0031           16.54870   0.015      0.00000    0.00000    0.00000    0.00000  
+SP0301           JB0279           OF0026           98.69436   0.015      0.00000    0.00000    0.00000    0.00000    
+
+[XSECTIONS]
+;;Link           Shape        Geom1            Geom2      Geom3      Geom4      Barrels    Culvert   
+;;-------------- ------------ ---------------- ---------- ---------- ---------- ---------- ----------
+;;SP0335           CIRCULAR     0.76200          0.00000    0.00000    0.00000    1          3         
+SP0302           CIRCULAR     0.60960          0.00000    0.00000    0.00000    1                    
+;;SP0334           CIRCULAR     0.76200          0.00000    0.00000    0.00000    1          3         
+SP0301           CIRCULAR     0.60960          0.00000    0.00000    0.00000    1                    
+
+[TIMESERIES]
+;;Name           Date       Time       Value     
+;;-------------- ---------- ---------- ----------
+
+[REPORT]
+;;Reporting Options
+INPUT NO
+CONTINUITY YES
+AVERAGES NO
+FLOWSTATS NO
+CONTROLS NO
+SUBCATCHMENTS NONE
+NODES NONE
+LINKS ALL
+
+
