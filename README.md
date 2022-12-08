@@ -24,12 +24,12 @@ For more details about the model implementation and validations, we encourage yo
      > /CPL_SWMM5/CPL_SWMM5.INPFORM       : SWMM5 input with all stormwater drainage components
      
      > /CPL_SWMM5/CPL_SWMM5.nc
-     >> var ELEVOFFSET: an offset in datum between TOPOGRAPHY(y, x) in Fulldom_hires.nc and the elevations in CPL_SWMM.INPFROM,  
-     >> var N_NODELAYER: the maximum number of stormwater junctions (inlets & outfalls) in a single grid cell,  
-     >> var NODEMASK#(y, x): 1 = coupled grid cells, otherwise 0,  
+     >> var ELEVOFFSET: offset in datum between TOPOGRAPHY(y, x) in Fulldom_hires.nc and Elevations in CPL_SWMM.INPFROM,  
+     >> var N_NODELAYER: maximum number of stormwater junctions (inlets & outfalls) in one grid cell,  
+     >> var NODEMASK#(y, x): 1 = coupled grid cell, otherwise 0,  
      >> var NODEINDEX#(y, x): i = i-th stormwater junction (inlets & outfalls)
      
-     > /CPL_SWMM5/00###/CPL_SWMM5.INPFORM : SWMM5 input for a partition that will be assigned to solve with a processor 000##
+     > /CPL_SWMM5/00###/CPL_SWMM5.INPFORM : SWMM5 input partition that will be assigned to solve with Processor 000##
 
 
 ## Notice
