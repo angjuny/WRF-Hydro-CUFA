@@ -5,13 +5,31 @@ Here, I have modified the WRF-Hydro® v5.2.0 (https://github.com/NCAR/wrf_hydro_
 
 ## Documentation
 For more details about the model implementation and validations, we encourage you to read the following reference that is currently in preparation for publication:
-  - Son, Y., Di Lorenzo, E., & Luo, J. (2023). WRF-Hydro-CUFA: A scalable and adaptable coastal-urban flood model based on the WRF-Hydro and SWMM models. Manuscript in preparation.
+  - Son, Y., Di Lorenzo, E., & Luo, J. (2023). WRF-Hydro-CUFA: A scalable and adaptable coastal-urban flood model based on the WRF-Hydro and SWMM models. *Manuscript in preparation*.
 
 
 ## Code Usage
   1. The uploaded codes in this repository should be added/replaced at the corresponding source directories before compiling the WRF-Hydro® v5.2.0 codes.
-  2. The SWMM executable that is compiled in the same Linux system should be added in the following paths:
-  3. The additional input folders/files should be provided as shown in '':
+  2. The SWMM Shared Object (.so) and Executable files should be placed in the following paths:  
+     /(Working Directory)/CPL_SWMM5/00###/libswmm5.so & runswmm5
+  3. The additional input folders/files should be provided with a structure in that 'input' folder:  
+     /BCHEAD                            : input directory for water levels
+     
+     > /BCHEAD/YYYYMMDDHH.BCHEAD_DOMAIN1  
+     >> var HEADMASK(y, x): 1 = controlled boundary, otherwise 0,  
+     >> var HEAD(y, x): water levels (as surface heads on grounds) at HEADMASK(y, x) = 1
+     
+     /CPL_SWMM5/                        : input directory for stormwater drainage
+     
+     > /CPL_SWMM5/CPL_SWMM5.INPFORM       : SWMM5 input with all stormwater drainage components
+     
+     > /CPL_SWMM5/CPL_SWMM5.nc
+     >> var ELEVOFFSET: an offset in datum between TOPOGRAPHY(y, x) in Fulldom_hires.nc and the elevations in CPL_SWMM.INPFROM,  
+     >> var N_NODELAYER: the maximum number of stormwater junctions (inlets & outfalls) in a single grid cell,  
+     >> var NODEMASK#(y, x): 1 = coupled grid cells, otherwise 0,  
+     >> var NODEINDEX#(y, x): i = i-th stormwater junction (inlets & outfalls)
+     
+     > /CPL_SWMM5/00###/CPL_SWMM5.INPFORM : SWMM5 input for a partition that will be assigned to solve with a processor 000##
 
 
 ## Notice
