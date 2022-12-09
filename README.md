@@ -16,7 +16,7 @@ Here, I have modified the WRF-Hydro® v5.2.0 (https://github.com/NCAR/wrf_hydro_
      
      /CPL_SWMM5/                        : input directory for stormwater drainage
      
-     > /CPL_SWMM5/CPL_SWMM5.INPFORM       : SWMM5 input with all stormwater drainage components
+     > /CPL_SWMM5/CPL_SWMM5.INPFORM       : SWMM5 input that includes all stormwater drainage components
      
      > /CPL_SWMM5/CPL_SWMM5.nc
      >> var ELEVOFFSET: offset in datum between TOPOGRAPHY(y, x) in Fulldom_hires.nc and Elevations in CPL_SWMM.INPFROM,  
@@ -24,7 +24,7 @@ Here, I have modified the WRF-Hydro® v5.2.0 (https://github.com/NCAR/wrf_hydro_
      >> var NODEMASK#(y, x): 1 = coupled grid cell, otherwise 0,  
      >> var NODEINDEX#(y, x): i = i-th stormwater junction (inlets & outfalls)
      
-     > /CPL_SWMM5/00###/CPL_SWMM5.INPFORM : SWMM5 input partition that will be assigned to solve with Processor 000##
+     > /CPL_SWMM5/00###/CPL_SWMM5.INPFORM : SWMM5 input partition that will be assigned to solve with Processor 00###
 
 
 ## Documentation
