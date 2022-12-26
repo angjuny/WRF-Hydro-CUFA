@@ -1,6 +1,6 @@
 # WRF-Hydro-CUFA (Coastal-Urban Flood Applications)
 ## Description
-Here, I have modified the WRF-Hydro® v5.2.0 (https://github.com/NCAR/wrf_hydro_nwm_public/releases/tag/v5.2.0) codes to study the floodwater interactions with a water boundary, surface and subsurface hydrologic processes, and stormwater drainage in coastal-urban systems. With the channel routing module set off, water levels can be imposed with respect to time and space, particularly along water boundaries such as coasts/rivers/creeks (as surface heads on grounds). In addition, I have coupled with the SWMM (https://www.epa.gov/water-research/storm-water-management-model-swmm) model to include the effects of stormwater drainage on floods.
+Here, I have modified the WRF-Hydro® v5.2.0 (https://github.com/NCAR/wrf_hydro_nwm_public/releases/tag/v5.2.0) codes to study floodwater interactions with water boundaries, surface and subsurface hydrologic processes, and stormwater drainage in coastal-urban systems. With the channel routing module set off, water levels can be imposed with respect to time and space, particularly along water boundaries such as coasts/rivers/creeks (as surface heads on grounds). In addition, I have coupled with the SWMM (https://www.epa.gov/water-research/storm-water-management-model-swmm) model to include the effects of stormwater drainage on floods.
 
 
 ## Code Usage
@@ -33,4 +33,4 @@ For more details about the model implementation and validations, we encourage yo
 
 
 ## Notice
-The WRF-Hydro modeling system was developed at the National Center for Atmospheric Research (NCAR) through grants from the National Aeronautics and Space Administration (NASA) and the National Oceanic and Atmospheric Administration (NOAA). NCAR is sponsored by the United States National Science Foundation.
+The WRF-Hydro® modeling system was developed at the National Center for Atmospheric Research (NCAR) through grants from the National Aeronautics and Space Administration (NASA) and the National Oceanic and Atmospheric Administration (NOAA). NCAR is sponsored by the United States National Science Foundation.
