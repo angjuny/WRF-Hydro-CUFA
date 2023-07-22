@@ -28,8 +28,8 @@ Here, I have modified the WRF-Hydro® v5.2.0 (https://github.com/NCAR/wrf_hydro_
 
 
 ## Documentation
-For more details about the model implementation and validations, we encourage you to read the following reference that is currently in preparation for publication:
-  - Son, Y., Di Lorenzo, E., & Luo, J. (2023). WRF-Hydro-CUFA: A scalable and adaptable coastal-urban flood model based on the WRF-Hydro and SWMM models. *Manuscript in preparation*.
+For more details about the model implementation and validations, we encourage you to read the following reference:
+  - Son, Y., Di Lorenzo, E., & Luo, J. (2023). WRF-Hydro-CUFA: A scalable and adaptable coastal-urban flood model based on the WRF-Hydro and SWMM models. *Environmental Modelling & Software*, 167. https://doi.org/10.1016/j.envsoft.2023.105770
 
 
 ## Notice
